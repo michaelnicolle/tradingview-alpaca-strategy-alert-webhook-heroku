@@ -22,12 +22,11 @@ def webhook():
             'message': 'nice try buddy'
         }
     
-    price = webhook_message['strategy']['order_price']
-    quantity = webhook_message['strategy']['order_contracts']
+    price = webhook_message['close']
+    quantity = 100
     symbol = webhook_message['ticker']
-    side = webhook_message['strategy']['order_action']
     
-    order = api.submit_order(symbol, quantity, side, 'limit', 'gtc', limit_price=price)
+    order = api.submit_order(symbol, quantity, side, 'limit', 'gtc', limit_price=price, extended_hours=extended, stop_loss={'stop_price': price * 0.98, 'limit_price':  price * 0.97}, take_profit={'limit_price': price * 1.015})
 
     # if a DISCORD URL is set in the config file, we will post to the discord webhook
     if config.DISCORD_WEBHOOK_URL:
