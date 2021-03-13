@@ -2,4 +2,4 @@ API_KEY = 'PKGYNMLVH149VGIWERP4'
 API_SECRET = 'sfWXhgUGb6Tk15lwE3g6763MRy4gdMB3XettzTFF'
 
 WEBHOOK_PASSPHRASE = 'Dilb@*2G7'
-DISCORD_WEBHOOK_URL = False # use a string containing your discord webhook url to enable
+DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/820341702618906724/w6WCa1DvC428F-ncsWkgyJjlffU6Ej4ezbZ3IWvg2_8Pa5Cl7-LNq__qfoYC1LMgRNIy'
